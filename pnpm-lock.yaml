@@ -3,3 +3,22 @@ lockfileVersion: '6.0'
 settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
+
+dependencies:
+  '@ffmpeg.wasm/core-mt':
+    specifier: ^0.13.2
+    version: 0.13.2
+  '@ffmpeg.wasm/main':
+    specifier: ^0.13.1
+    version: 0.13.1
+
+packages:
+
+  /@ffmpeg.wasm/core-mt@0.13.2:
+    resolution: {integrity: sha512-3UgpMoOhpTslxluDvBrh0MULeNy55W+WWG00P+JnnCLpJulQxgi6mnIuGO03d2sfV5pyW/FqAwut+fiMLbRsPg==}
+    dev: false
+
+  /@ffmpeg.wasm/main@0.13.1:
+    resolution: {integrity: sha512-WoEd9xp/N9VWddZ3y1cdRK/el52ZKLoqOS+BNQZcsbLQpkQuHrFG93+zY4VjMZ0aWno4pQG4TSgLzsexpukpHw==}
+    engines: {node: '>=14.0.0'}
+    dev: false

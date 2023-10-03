@@ -12,5 +12,9 @@
   "volta": {
     "node": "20.7.0",
     "pnpm": "8.8.0"
+  },
+  "dependencies": {
+    "@ffmpeg.wasm/core-mt": "^0.13.2",
+    "@ffmpeg.wasm/main": "^0.13.1"
   }
 }
