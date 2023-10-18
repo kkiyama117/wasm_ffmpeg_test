@@ -1,15 +1,23 @@
-
-const http = require('http');
+const express = require('express');
+const app = express();
 
 const hostname = '127.0.0.1';
 const port = 3000;
+const statusCode = 200;
 
-const server = http.createServer((req, res) => {
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/plain');
-    res.end('Hello World');
+app.use((_, res, next) => {
+    res.append("Cross-Origin-Opener-Policy", "same-origin");
+    res.append("Cross-Origin-Embedder-Policy", "require-corp");
+    next();
 });
 
-server.listen(port, hostname, () => {
-    console.log(`Server running at http://${hostname}:${port}/`);
-});
+app.use(express.static(__dirname + '/public'));
+
+// app.get("/", () => (req, res) => {
+//     res.sendFile(__dirname + path)
+// })
+const server = app.listen(port, function () {
+    console.log(server.address().port + " start");
+})
+
+
